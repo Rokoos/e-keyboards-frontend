@@ -1,0 +1,346 @@
+/* ==============  View  =================== */
+.view {
+  height: 20vh !important;
+  margin-top: 50px;
+  font-size: 0.8rem;
+}
+
+.view-text {
+  font-family: "DotGothic16", sans-serif;
+}
+
+.typeWriter_style {
+  margin-top: 80px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .view {
+    height: 30vh !important;
+    font-size: 1.3rem;
+  }
+  .typeWriter_style {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .view {
+    height: 50vh !important;
+    font-size: 1.8rem;
+  }
+}
+
+.bounce_icon {
+  margin-top: 100px;
+  animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.bounce_icon-image {
+  height: 50px;
+  width: auto;
+}
+
+@media (min-width: 450px) {
+  .bounce_icon-image {
+    height: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bounce_icon-image {
+    height: 120px;
+  }
+}
+
+/* 
+Photo by <a href="https://unsplash.com/@puk_khantho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Puk Khantho</a> on <a href="/s/photos/keyboard-instrument?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+*/
+
+/* //////////////////// user history, wishlist /////////////// */
+.user_nav-active {
+  text-decoration: underline;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.6rem;
+  justify-content: center;
+  /* margin-top: 50px; */
+}
+
+.user_menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.user_wishlist {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .navlist {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  .user_menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user_wishlist {
+    flex-direction: row;
+  }
+}
+
+/* ============== Slider=================== */
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.carousel-indicators {
+  bottom: -50px !important;
+  cursor: pointer;
+}
+.carousel-indicators li {
+  background-color: #ddd;
+}
+
+.carousel-indicators .active {
+  background-color: #999;
+}
+.carousel-inner {
+  margin-left: auto !important ;
+}
+.gustaw {
+  display: none;
+}
+.lojej {
+  margin: 0 auto;
+  background-color: #5469d4;
+}
+
+.ant-menu-item {
+  margin: 0 10px 0 20px !important;
+}
+
+@media (min-width: 600px) {
+  .gustaw {
+    display: inline-block;
+  }
+}
+
+.header-medium {
+  display: flex;
+  justify-content: center;
+}
+.btn-black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  color: #fff;
+  margin: 1rem;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.btn-black:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.count {
+  align-self: center;
+}
+
+.container {
+  max-width: 100% !important ;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px !important ;
+  }
+  .ginek {
+    height: 330px;
+  }
+}
+.wiesiek {
+}
+
+.losFooteros {
+  height: 100px;
+}
+
+/* ant-modal */
+.ant-modal-title {
+  text-align: center;
+}
+.ant-modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group-item :first-child {
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .container_arrivals-sellers {
+    height: 300px;
+  }
+}
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  background-color: #fff !important;
+}
+
+.slider img {
+  /* height: 450px; */
+  /* object-fit: cover; */
+}
+
+/* ///////////////////////////////// Shop ////////////////////////*/
+.filters-display {
+  display: none;
+}
+.button-display {
+  display: block;
+  margin-right: 1rem;
+}
+@media (min-width: 992px) {
+  .filters-display {
+    display: block;
+  }
+  .button-display {
+    display: none;
+  }
+}
+
+/* //////////////////////////// Header ///////////////////// */
+.cart_count {
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-cart-count {
+  display: none;
+}
+
+/* ////////////////////////////// Cart ///////////////////// */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-size {
+  width: 200px;
+  height: auto;
+}
+
+@media (min-width: 500px) {
+  .photo-size {
+    width: 300px;
+    /* height: auto; */
+  }
+}
+
+@media (min-width: 800px) {
+  .cart-item {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .cart-item2 {
+    margin: 20px 0;
+  }
+  .photo-size {
+    width: 400px;
+  }
+}
+/* //////////////////////// Checkout //////////////// */
+.checkout_margin {
+  margin-top: 100px;
+}
+
+/* ////////////Loader////////////////// */
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 150px auto;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(13, 145, 242, 0.2);
+  border-right: 1.1em solid rgba(13, 145, 242, 0.2);
+  border-bottom: 1.1em solid rgba(13, 145, 242, 0.2);
+  border-left: 1.1em solid #0d91f2;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
