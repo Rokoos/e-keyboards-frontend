@@ -56,6 +56,7 @@ const StripeCheckout = ({history}) => {
     useEffect(() => {
         createPaymentIntent(user.token)
         .then(res => {
+          console.log('cliebtsecret', res.data.clientSecret)
             setClientSecret(res.data.clientSecret)
             setCartTotal(res.data.cartTotal)
         })
@@ -77,6 +78,7 @@ const StripeCheckout = ({history}) => {
         if(payload.error){
           setError(`Payment failed ${payload.error.message}`)
         }else{
+          console.log(JSON.stringify(payload, null, 4))
           createOrder(payload, user.token)
           .then(res => {
             if(res.data.ok){

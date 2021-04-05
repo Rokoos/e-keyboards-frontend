@@ -4,6 +4,7 @@ export const createPaymentIntent = (authtoken) => axios.post(`${process.env.REAC
     {},
     {
         headers: {
-            authtoken
+            authtoken,
+            "Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"
         }
     })
