@@ -54,9 +54,10 @@ const StripeCheckout = ({history}) => {
     const options = useOptions();
 
     useEffect(() => {
+      console.log('nosz qrwaaaaaaaaaaaaaaaaaaaaaaaaa')
         createPaymentIntent(user.token)
         .then(res => {
-          console.log('cliebtsecret', res.data.clientSecret)
+          console.log('by to chujjjjjjjjjjjjjjjjjjjjjjjjjjj')
             setClientSecret(res.data.clientSecret)
             setCartTotal(res.data.cartTotal)
         })
