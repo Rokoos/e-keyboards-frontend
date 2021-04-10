@@ -77,7 +77,6 @@ const StripeCheckout = ({history}) => {
         if(payload.error){
           setError(`Payment failed ${payload.error.message}`)
         }else{
-          console.log(JSON.stringify(payload, null, 4))
           createOrder(payload, user.token)
           .then(res => {
             if(res.data.ok){
