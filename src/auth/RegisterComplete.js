@@ -14,7 +14,11 @@ const RegisterComplete = ({history}) => {
   const [password, setPassword] = useState('')
 
   useEffect(() => {
-    setEmail(localStorage.getItem('emailForRegistration')) 
+
+    if(localStorage.getItem('emailForRegistration')){
+      setEmail(localStorage.getItem('emailForRegistration'))
+    }
+     
   }, [])
 
   const handleSubmit = async e => {
@@ -48,6 +52,7 @@ const RegisterComplete = ({history}) => {
             createOrUpdateUser(idTokenResult.token)
             .then(res => {
             dispatch(loggedIn(res.data.name, res.data.email,  idTokenResult.token,res.data.role, res.data._id ))
+            toast.success('You have been registered and logged in!')
           })
           .catch(err => console.log(err))
             //redirect
@@ -62,7 +67,10 @@ const RegisterComplete = ({history}) => {
   const completeRegisterForm = () => (
     <form onSubmit={handleSubmit}>
       <input type="email" className="form-control mb-3" 
-      value={email} disabled/>
+      value={email} autoFocus
+      placeholder='Enter Your email'
+      onChange={e => setEmail(e.target.value)}
+      />
       <input type="password" className="form-control mb-3" 
       value={password} autoFocus 
       placeholder='Enter Your password'
@@ -76,7 +84,9 @@ const RegisterComplete = ({history}) => {
   return (
     <div className="container p-5">
       <div className="row">
-        <div className="col-md-6 offset-md-3 mt-5">
+        <div
+        
+        className="col-md-6 offset-md-3 mt-5">
           <h4>Register Complete</h4>
           {completeRegisterForm()}
         </div>

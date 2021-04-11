@@ -29,7 +29,6 @@ const Password = () => {
   const passwordUpdate = () => (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label >Your Password</label>
         <input 
           type="password" 
           className="form-control"
