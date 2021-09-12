@@ -74,7 +74,9 @@ const Login = ({history}) => {
 
   const loginForm = () => (
     <form>
-      <div className="form-group">
+      <div className="form-group"
+      
+      >
         <input 
         type="email" 
         placeholder="Enter Your Email"
