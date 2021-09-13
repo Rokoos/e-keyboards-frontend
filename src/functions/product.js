@@ -23,7 +23,7 @@ export const updateProduct = async (slug, product, authtoken) =>  await axios.pu
 })
 
 
-export const getProducts = async (sort, order, page) =>  await axios.post(`https://e-keyboards-api.herokuapp.com/api/products`,{
+export const getProducts = async (sort, order, page) =>  await axios.post(`${process.env.REACT_APP_API}/products`,{
     sort, 
     order, 
     page
