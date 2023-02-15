@@ -27,6 +27,8 @@ const Header = ({history}) => {
 useEffect(() => {
   setCurrent(loc)
 }, [loc])
+
+
   const handleClick = (e) => {
     setCurrent(e.key)
   }  
